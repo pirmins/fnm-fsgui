@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Login</h3>
+    <div class="box">
+        <form method="post">
+            {% csrf_token %}
+            {% include 'bulma_widget/form.djhtml' with form=form %}
+            <button type="submit">Log In</button>
+          </form>
+    </div>
+</div>
+{% endblock %}
